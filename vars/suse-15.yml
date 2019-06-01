@@ -22,8 +22,6 @@ _zypper_repository: [
     name: "virtualbox",
     repo: "http://download.virtualbox.org/virtualbox/rpm/opensuse/15.0/x86_64",
     priority: 120,
-    auto_import_keys: true,
-    autorefresh: true,
     state: "present",
   }
 ]

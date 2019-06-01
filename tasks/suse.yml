@@ -37,9 +37,9 @@
     name: "{{ item.name }}"
     repo: "{{ item.repo }}"
     priority: "{{ item.priority }}"
-    auto_import_keys: "{{ item.auto_import_keys }}"
-    autorefresh: "{{ item.autorefresh }}"
     state: "{{ item.state }}"
+    auto_import_keys: true,
+    autorefresh: true,
   with_items: "{{ _zypper_repository }}"
   tags: virtualbox
 

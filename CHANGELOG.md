@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Simplify for openSUSE by `disable_gpg_check: true`
+
 ## 3.0.0 - 2019-05-31
 
   - Initial release for Ansible 2.8 or higher

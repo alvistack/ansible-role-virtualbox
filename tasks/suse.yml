@@ -36,8 +36,8 @@
   zypper_repository:
     name: "{{ item.name }}"
     repo: "{{ item.repo }}"
-    priority: "{{ item.priority }}"
     state: "{{ item.state }}"
+    disable_gpg_check: true
     auto_import_keys: true
     autorefresh: true
   with_items: "{{ _zypper_repository }}"

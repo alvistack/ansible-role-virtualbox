@@ -27,7 +27,7 @@
     url: "{{ item.url }}"
     id: "{{ item.id }}"
     state: "{{ item.state }}"
-  with_items: "{{ _apt_key }}"
+  loop: "{{ _apt_key }}"
   register: result
   until: result is succeeded
   tags: virtualbox
@@ -36,14 +36,14 @@
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
-  with_items: "{{ _apt_repository }}"
+  loop: "{{ _apt_repository }}"
   tags: virtualbox
 
 - name: apt-get install
   apt:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  with_items: "{{ _apt }}"
+  loop: "{{ _apt }}"
   register: result
   until: result is succeeded
   tags: virtualbox

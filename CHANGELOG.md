@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Update LXD test profile for openSUSE LEAP 15.1
+
 ## 3.2.0 - 2019-07-08
 
 ### Major Changes

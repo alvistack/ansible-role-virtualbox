@@ -14,12 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt_key: [
-  { state: "present", id: "2980AECF", url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc" },
-]
-_apt_repository: [
-  { state: "present", repo: "deb https://download.virtualbox.org/virtualbox/debian xenial contrib" },
-]
-_apt: [
-  { state: "latest", name: "virtualbox-6.0" },
-]
+_apt_key:
+  - { state: "present", id: "2980AECF", url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc" }
+
+_apt_repository:
+  - { state: "present", repo: "deb https://download.virtualbox.org/virtualbox/debian xenial contrib" }
+
+_apt:
+  - { state: "latest", name: "virtualbox-6.0" }

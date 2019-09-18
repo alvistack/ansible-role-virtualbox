@@ -14,16 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_rpm_key: [
-  { state: "present", key: "https://www.virtualbox.org/download/oracle_vbox.asc" },
-]
-_zypper_repository: [
-  {
-    name: "virtualbox",
-    repo: "http://download.virtualbox.org/virtualbox/rpm/opensuse/15.0/x86_64",
-    state: "present",
-  }
-]
-_zypper: [
-  { state: "latest", name: "VirtualBox-6.0" },
-]
+_rpm_key:
+  - { state: "present", key: "https://www.virtualbox.org/download/oracle_vbox.asc" }
+
+_zypper_repository:
+  - name: "virtualbox"
+    repo: "http://download.virtualbox.org/virtualbox/rpm/opensuse/15.0/x86_64"
+    state: "present"
+
+_zypper:
+  - { state: "latest", name: "VirtualBox-6.0" }

@@ -14,22 +14,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_rpm_key: [
-  { state: "present", key: "https://www.virtualbox.org/download/oracle_vbox.asc" },
-]
-_yum_repository: [
-  {
-    file: "virtualbox",
-    name: "virtualbox",
-    description: "Oracle Linux / RHEL / CentOS-$releasever / $basearch - VirtualBox",
-    baseurl: "http://download.virtualbox.org/virtualbox/rpm/el/$releasever/$basearch",
-    enabled: true,
-    gpgcheck: true,
-    repo_gpgcheck: true,
-    gpgkey: "https://www.virtualbox.org/download/oracle_vbox.asc",
-    state: "present",
-  }
-]
-_yum: [
-  { state: "latest", name: "VirtualBox-6.0" },
-]
+_rpm_key:
+  - { state: "present", key: "https://www.virtualbox.org/download/oracle_vbox.asc" }
+
+_yum_repository:
+  - file: "virtualbox"
+    name: "virtualbox"
+    description: "Oracle Linux / RHEL / CentOS-$releasever / $basearch - VirtualBox"
+    baseurl: "http://download.virtualbox.org/virtualbox/rpm/el/$releasever/$basearch"
+    enabled: true
+    gpgcheck: true
+    repo_gpgcheck: true
+    gpgkey: "https://www.virtualbox.org/download/oracle_vbox.asc"
+    state: "present"
+
+_yum:
+  - { state: "latest", name: "VirtualBox-6.0" }

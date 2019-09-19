@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Default with Python 3
+
 ## 3.4.0 - 2019-09-18
 
 ### Major Changes

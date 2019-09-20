@@ -4,6 +4,9 @@
 
 ### Major Changes
 
+  - Default with Python 3
+  - Revamp molecule test with vagrant
+
 ## 3.4.0 - 2019-09-18
 
 ### Major Changes

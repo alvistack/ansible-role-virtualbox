@@ -18,6 +18,8 @@
   remote_user: root
   become: true
   roles:
+    - role: bootstrap
+    - role: python
     - role: virtualbox
 
 - hosts: all

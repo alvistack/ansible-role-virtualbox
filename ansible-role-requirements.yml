@@ -17,3 +17,7 @@
 - name: bootstrap
   src: https://github.com/alvistack/ansible-role-bootstrap
   version: develop
+
+- name: python
+  src: https://github.com/alvistack/ansible-role-python
+  version: develop

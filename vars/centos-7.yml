@@ -29,4 +29,4 @@ _yum_repository:
     state: "present"
 
 _yum:
-  - { state: "latest", name: "VirtualBox-6.0" }
+  - { state: "latest", name: "VirtualBox-6.1" }

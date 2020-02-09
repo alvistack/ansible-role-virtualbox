@@ -25,7 +25,6 @@
 - name: apt-key add
   apt_key:
     url: "{{ item.url }}"
-    id: "{{ item.id }}"
     state: "{{ item.state }}"
   loop: "{{ _apt_key }}"
   register: result

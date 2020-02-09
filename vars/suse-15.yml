@@ -23,4 +23,4 @@ _zypper_repository:
     state: "present"
 
 _zypper:
-  - { state: "latest", name: "VirtualBox-6.0" }
+  - { state: "latest", name: "VirtualBox-6.1" }

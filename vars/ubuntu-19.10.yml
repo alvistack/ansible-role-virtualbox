@@ -18,7 +18,7 @@ _apt_key:
   - { state: "present", url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc" }
 
 _apt_repository:
-  - { state: "present", repo: "deb https://download.virtualbox.org/virtualbox/debian bionic contrib" }
+  - { state: "present", repo: "deb https://download.virtualbox.org/virtualbox/debian eoan contrib" }
 
 _apt:
   - { state: "latest", name: "virtualbox-6.1" }

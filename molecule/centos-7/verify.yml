@@ -17,7 +17,8 @@
 - hosts: all
   remote_user: root
   become: true
-  roles:
-    - role: bootstrap
-    - role: python
-    - role: virtualbox
+  tasks:
+    - name: vboxmanage --version
+      command: vboxmanage --version
+      register: result
+      changed_when: result is not succeeded

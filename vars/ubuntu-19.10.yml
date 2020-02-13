@@ -14,10 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- hosts: all
-  remote_user: root
-  become: true
-  roles:
-    - role: bootstrap
-    - role: python
-    - role: virtualbox
+_apt_key:
+  - { state: "present", url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc" }
+
+_apt_repository:
+  - { state: "present", repo: "deb https://download.virtualbox.org/virtualbox/debian eoan contrib" }
+
+_apt:
+  - { state: "latest", name: "virtualbox-6.1" }

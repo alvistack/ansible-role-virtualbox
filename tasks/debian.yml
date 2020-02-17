@@ -36,6 +36,8 @@
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
   loop: "{{ _apt_repository }}"
+  register: result
+  until: result is succeeded
   tags: virtualbox
 
 - name: apt-get install

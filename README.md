@@ -1,11 +1,11 @@
-# Ansible Role for Virtualbox
+# Ansible Role for VirtualBox
 
 [![Travis](https://img.shields.io/travis/alvistack/ansible-role-virtualbox.svg)](https://travis-ci.org/alvistack/ansible-role-virtualbox)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-virtualbox.svg)](https://github.com/alvistack/ansible-role-virtualbox)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-virtualbox.svg)](https://github.com/alvistack/ansible-role-virtualbox/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.virtualbox-blue.svg)](https://galaxy.ansible.com/alvistack/virtualbox)
 
-Ansible Role for Virtualbox Installation.
+Ansible Role for VirtualBox Installation.
 
 ## Requirements
 

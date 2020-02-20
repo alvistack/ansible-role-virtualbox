@@ -1,4 +1,4 @@
-# Ansible Role for Virtualbox
+# Ansible Role for VirtualBox
 
 ## 4.3.0 - TBC
 

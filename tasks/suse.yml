@@ -29,6 +29,7 @@
     ansible_python_interpreter: "python3"
   rpm_key:
     key: "{{ item.key }}"
+    fingerprint: "{{ item.fingerprint }}"
     state: "{{ item.state }}"
     validate_certs: false
   loop: "{{ _rpm_key }}"

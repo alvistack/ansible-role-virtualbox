@@ -15,7 +15,9 @@
 # limitations under the License.
 
 _rpm_key:
-  - { state: "present", key: "https://www.virtualbox.org/download/oracle_vbox.asc" }
+  - key: "https://www.virtualbox.org/download/oracle_vbox.asc"
+    fingerprint: "2980AECF"
+    state: "present"
 
 _zypper_repository:
   - name: "virtualbox"

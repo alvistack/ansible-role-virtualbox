@@ -16,7 +16,7 @@
 
 _apt_key:
   - url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
-    id: "2980AECF"
+    id: "B9F8D658297AF3EFC18D5CDFA2F683C52980AECF"
     state: "present"
 
 _apt_repository:

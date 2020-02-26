@@ -15,10 +15,13 @@
 # limitations under the License.
 
 _apt_key:
-  - { state: "present", url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc" }
+  - url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
+    id: "B9F8D658297AF3EFC18D5CDFA2F683C52980AECF"
+    state: "present"
 
 _apt_repository:
-  - { state: "present", repo: "deb https://download.virtualbox.org/virtualbox/debian bionic contrib" }
+  - repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian bionic contrib"
+    state: "present"
 
 _package:
   "6.1":

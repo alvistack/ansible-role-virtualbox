@@ -1,9 +1,10 @@
-# Ansible Role for Virtualbox
+# Ansible Role for VirtualBox
 
 ## 4.3.0 - TBC
 
 ### Major Changes
 
+  - Upgrade minimal Molecule support to 3.0.2
   - Migrate role name to lowercase or underline
   - Migrate group name to lowercase or underline
   - Migrate molecule `group_vars` to file

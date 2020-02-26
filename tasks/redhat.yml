@@ -25,6 +25,7 @@
 - name: rpm --import
   rpm_key:
     key: "{{ item.key }}"
+    fingerprint: "{{ item.fingerprint }}"
     state: "{{ item.state }}"
   loop: "{{ _rpm_key }}"
   register: result

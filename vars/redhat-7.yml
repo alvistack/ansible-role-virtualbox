@@ -15,7 +15,9 @@
 # limitations under the License.
 
 _rpm_key:
-  - { state: "present", key: "https://www.virtualbox.org/download/oracle_vbox.asc" }
+  - key: "https://www.virtualbox.org/download/oracle_vbox.asc"
+    fingerprint: "7B0FAB3A13B907435925D9C954422A4B98AB5139"
+    state: "present"
 
 _yum_repository:
   - file: "virtualbox"

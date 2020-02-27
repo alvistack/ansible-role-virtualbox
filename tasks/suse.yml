@@ -56,7 +56,7 @@
   zypper:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-    force: true
+    extra_args: "--allow-vendor-change"
   loop: "{{ virtualbox_package }}"
   register: result
   until: result is succeeded

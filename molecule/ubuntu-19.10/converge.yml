@@ -17,7 +17,12 @@
 - hosts: all
   remote_user: root
   become: true
-  roles:
-    - role: bootstrap
-    - role: python
-    - role: virtualbox
+  tasks:
+    - include_role:
+        name: bootstrap
+
+    - include_role:
+        name: python
+
+    - include_role:
+        name: virtualbox

@@ -8,6 +8,7 @@
   - Migrate role name to lowercase or underline
   - Migrate group name to lowercase or underline
   - Migrate molecule `group_vars` to file
+  - Consolidate molecule tests into `default` (noop)
 
 ## 4.2.0 - 2020-02-13
 

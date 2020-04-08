@@ -50,7 +50,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ virtualbox_package }}"
+  loop: "{{ _yum[virtualbox_release] }}"
   register: result
   until: result is succeeded
   tags: virtualbox

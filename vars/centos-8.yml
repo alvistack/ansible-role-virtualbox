@@ -30,7 +30,7 @@ _yum_repository:
     gpgkey: "https://www.virtualbox.org/download/oracle_vbox.asc"
     state: "present"
 
-_package:
+_yum:
   "6.1":
     - { state: "latest", name: "VirtualBox-6.1" }
   "6.0":

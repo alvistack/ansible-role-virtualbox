@@ -23,7 +23,7 @@ _apt_repository:
   - repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian bionic contrib"
     state: "present"
 
-_package:
+_apt:
   "6.1":
     - { state: "latest", name: "virtualbox-6.1" }
   "6.0":

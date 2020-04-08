@@ -57,7 +57,7 @@
     name: "{{ item.name }}"
     state: "{{ item.state }}"
     extra_args: "--allow-vendor-change"
-  loop: "{{ virtualbox_package }}"
+  loop: "{{ _zypper[virtualbox_release] }}"
   register: result
   until: result is succeeded
   tags: virtualbox

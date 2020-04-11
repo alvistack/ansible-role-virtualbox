@@ -14,19 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt_key:
-  - url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
-    id: "B9F8D658297AF3EFC18D5CDFA2F683C52980AECF"
-    state: "present"
-
-_apt_repository:
-  - repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian xenial contrib"
-    state: "present"
-
-_apt:
-  "6.1":
-    - { state: "latest", name: "virtualbox-6.1" }
-  "6.0":
-    - { state: "latest", name: "virtualbox-6.0" }
-  "5.2":
-    - { state: "latest", name: "virtualbox-5.2" }
+- hosts: localhost
+  connection: local
+  remote_user: root
+  become: true
+  gather_facts: false
+  tasks:
+    - name: docker rm
+      docker_container:
+        name: "{{ item.name }}"
+        state: "absent"
+      loop_control:
+        label: "{{ item.name }}"
+      loop: "{{ molecule_yml.platforms }}"

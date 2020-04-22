@@ -22,8 +22,8 @@ _rpm_key:
 _yum_repository:
   - file: "virtualbox"
     name: "virtualbox"
-    description: "Oracle Linux / RHEL / CentOS-$releasever / $basearch - VirtualBox"
-    baseurl: "http://download.virtualbox.org/virtualbox/rpm/el/$releasever/$basearch"
+    description: "Oracle Linux / RHEL / CentOS-8 / x86_64 - VirtualBox"
+    baseurl: "http://download.virtualbox.org/virtualbox/rpm/el/8/x86_64"
     enabled: true
     gpgcheck: true
     repo_gpgcheck: true

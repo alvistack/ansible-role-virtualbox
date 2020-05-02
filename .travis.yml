@@ -61,4 +61,4 @@ script:
       && sudo -E molecule verify -s $MOLECULE_SCENARIO_NAME
 
 notifications:
-  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/?branch=master

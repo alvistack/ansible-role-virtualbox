@@ -24,11 +24,15 @@ This role was designed for:
 
 ## Dependencies
 
-[meta/main.yml](meta/main.yml)
+[ansible-role-requirements.yml](ansible-role-requirements.yml)
 
 ## Example Playbook
 
 [molecule/default/converge.yml](molecule/default/converge.yml)
+
+This role could simply deploy to `localhost` as below:
+
+    molecule converge -s default
 
 ## License
 

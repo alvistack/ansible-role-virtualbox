@@ -14,29 +14,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-galaxy_info:
-  role_name: virtualbox
-  author: "Wong Hoi Sing Edison <hswong3i@pantarei-design.com>"
-  description: Ansible Role for VirtualBox Installation
-  company: PantaRei Design
-  license: Apache-2.0
-  min_ansible_version: 2.9
-  platforms:
-    - name: Ubuntu
-      versions:
-        - focal
-        - eoan
-        - bionic
-    - name: Debian
-      versions:
-        - buster
-    - name: EL
-      versions:
-        - 8
-        - 7
-    - name: opensuse
-      versions:
-        - 15.1
-  galaxy_tags:
-    - system
-dependencies: []
+_apt_key:
+  - url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
+    id: "B9F8D658297AF3EFC18D5CDFA2F683C52980AECF"
+    state: "present"
+
+_apt_repository:
+  - repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian buster contrib"
+    state: "present"
+
+_apt:
+  "6.1":
+    - { state: "latest", name: "virtualbox-6.1" }
+  "6.0":
+    - { state: "latest", name: "virtualbox-6.0" }
+  "5.2":
+    - { state: "latest", name: "virtualbox-5.2" }

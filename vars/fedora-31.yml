@@ -22,8 +22,8 @@ _rpm_key:
 _yum_repository:
   - file: "virtualbox"
     name: "virtualbox"
-    description: "Fedora 30 - x86_64 - VirtualBox"
-    baseurl: "http://download.virtualbox.org/virtualbox/rpm/fedora/30/x86_64"
+    description: "Fedora 31 - x86_64 - VirtualBox"
+    baseurl: "http://download.virtualbox.org/virtualbox/rpm/fedora/31/x86_64"
     enabled: true
     gpgcheck: true
     repo_gpgcheck: true

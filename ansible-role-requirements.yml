@@ -14,12 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- hosts: all
-  remote_user: root
-  become: true
-  tasks:
-    - include_role:
-        name: vagrant
-
-    - include_role:
-        name: virtualbox
+- name: vagrant
+  src: https://github.com/alvistack/ansible-role-vagrant
+  version: develop

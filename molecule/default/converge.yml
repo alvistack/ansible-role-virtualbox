@@ -19,4 +19,7 @@
   become: true
   tasks:
     - include_role:
+        name: vagrant
+
+    - include_role:
         name: virtualbox

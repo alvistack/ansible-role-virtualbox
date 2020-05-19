@@ -20,7 +20,7 @@ _apt_key:
     state: "present"
 
 _apt_repository:
-  - repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian eoan contrib"
+  - repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib"
     state: "present"
 
 _apt:
@@ -28,5 +28,4 @@ _apt:
     - { state: "latest", name: "virtualbox-6.1" }
   "6.0":
     - { state: "latest", name: "virtualbox-6.0" }
-  "5.2":
-    - { state: "latest", name: "virtualbox-5.2" }
+  "5.2": []

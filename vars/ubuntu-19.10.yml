@@ -28,5 +28,4 @@ _apt:
     - { state: "latest", name: "virtualbox-6.1" }
   "6.0":
     - { state: "latest", name: "virtualbox-6.0" }
-  "5.2":
-    - { state: "latest", name: "virtualbox-5.2" }
+  "5.2": []

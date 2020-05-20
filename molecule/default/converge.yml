@@ -20,6 +20,8 @@
   tasks:
     - include_role:
         name: vagrant
+      tags: vagrant
 
     - include_role:
         name: virtualbox
+      tags: virtualbox

@@ -24,19 +24,6 @@
   until: result is succeeded
   tags: virtualbox
 
-- name: rpm --import
-  vars:
-    ansible_python_interpreter: "python3"
-  rpm_key:
-    key: "{{ item.key }}"
-    fingerprint: "{{ item.fingerprint }}"
-    state: "{{ item.state }}"
-    validate_certs: false
-  loop: "{{ _rpm_key }}"
-  register: result
-  until: result is succeeded
-  tags: virtualbox
-
 - name: zypper addrepo
   vars:
     ansible_python_interpreter: "python3"

@@ -30,8 +30,8 @@
   zypper_repository:
     name: "{{ item.name }}"
     repo: "{{ item.repo }}"
-    state: "{{ item.state }}"
-    mode: "0644"
+    mode: "{{ item.mode | default('0644') }}"
+    state: "{{ item.state | default('present') }}"
     disable_gpg_check: true
     auto_import_keys: true
     autorefresh: true

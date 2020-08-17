@@ -25,8 +25,8 @@ _yum_repository:
     description: "Oracle Linux / RHEL / CentOS-7 / x86_64 - VirtualBox"
     baseurl: "http://download.virtualbox.org/virtualbox/rpm/el/7/x86_64"
     enabled: true
+    priority: "2"
     gpgcheck: true
-    repo_gpgcheck: true
     gpgkey: "https://www.virtualbox.org/download/oracle_vbox.asc"
     state: "present"
 

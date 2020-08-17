@@ -30,11 +30,11 @@
   zypper_repository:
     name: "{{ item.name }}"
     repo: "{{ item.repo }}"
-    mode: "{{ item.mode | default('0644') }}"
-    state: "{{ item.state | default('present') }}"
+    state: "{{ item.state }}"
     disable_gpg_check: true
     auto_import_keys: true
     autorefresh: true
+    mode: "0644"
   loop: "{{ _zypper_repository }}"
   register: result
   until: result is succeeded

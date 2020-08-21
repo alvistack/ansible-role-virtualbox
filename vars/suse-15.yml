@@ -14,11 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_rpm_key:
-  - key: "https://www.virtualbox.org/download/oracle_vbox.asc"
-    fingerprint: "7B0FAB3A13B907435925D9C954422A4B98AB5139"
-    state: "present"
-
 _zypper_repository:
   - name: "virtualbox"
     repo: "http://download.virtualbox.org/virtualbox/rpm/opensuse/15.0/x86_64"

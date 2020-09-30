@@ -22,7 +22,6 @@
     state: "present"
   register: result
   until: result is succeeded
-  tags: virtualbox
 
 - name: zypper addrepo
   vars:
@@ -37,7 +36,6 @@
   loop: "{{ _zypper_repository }}"
   register: result
   until: result is succeeded
-  tags: virtualbox
 
 - name: zypper install
   vars:
@@ -49,4 +47,3 @@
   loop: "{{ _zypper[virtualbox_release] }}"
   register: result
   until: result is succeeded
-  tags: virtualbox

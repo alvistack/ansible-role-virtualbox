@@ -14,26 +14,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_rpm_key:
-  - key: "https://www.virtualbox.org/download/oracle_vbox.asc"
-    fingerprint: "7B0FAB3A13B907435925D9C954422A4B98AB5139"
+_apt_key:
+  - url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
+    id: "B9F8D658297AF3EFC18D5CDFA2F683C52980AECF"
     state: "present"
 
-_yum_repository:
-  - file: "virtualbox"
-    name: "virtualbox"
-    description: "Fedora 32 - x86_64 - VirtualBox"
-    baseurl: "http://download.virtualbox.org/virtualbox/rpm/fedora/32/x86_64"
-    enabled: true
-    priority: "2"
-    gpgcheck: true
-    gpgkey: "https://www.virtualbox.org/download/oracle_vbox.asc"
+_apt_repository:
+  - repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib"
     state: "present"
 
-_yum:
+_apt:
   "6.1":
-    - { state: "latest", name: "VirtualBox-6.1" }
+    - { state: "latest", name: "virtualbox-6.1" }
   "6.0":
-    - { state: "latest", name: "VirtualBox-6.0" }
-  "5.2":
-    - { state: "latest", name: "VirtualBox-5.2" }
+    - { state: "latest", name: "virtualbox-6.0" }
+  "5.2": []

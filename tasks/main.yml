@@ -44,3 +44,35 @@
       paths:
         - "."
   ignore_errors: true
+
+- name: prepare directories
+  file:
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0755') }}"
+    state: "{{ item.state | default('directory') }}"
+  loop:
+    - { dest: "{{ virtualbox_extpack_download.dest | dirname }}" }
+
+- name: download archive
+  vars:
+    ansible_python_interpreter: "python3"
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+    checksum: "{{ item.checksum }}"
+    mode: "{{ item.mode | default('0644') }}"
+    timeout: 300
+  loop:
+    - "{{ virtualbox_extpack_download }}"
+  register: get_url_result
+  until: get_url_result is succeeded
+
+- name: vboxmanage extpack install
+  shell: |
+    set -euo pipefail
+    echo "y" | vboxmanage extpack install {{ virtualbox_extpack_download.dest }} --replace
+  args:
+    executable: "/bin/bash"
+  when: get_url_result is changed

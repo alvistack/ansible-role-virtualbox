@@ -43,7 +43,6 @@
   zypper:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-    extra_args: "--allow-vendor-change"
-  loop: "{{ _zypper[virtualbox_release] }}"
+  loop: "{{ _zypper }}"
   register: result
   until: result is succeeded

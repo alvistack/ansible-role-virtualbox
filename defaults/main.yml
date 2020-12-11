@@ -14,5 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# VirtualBox release.
-virtualbox_release: "6.1"
+# VirtualBox version.
+virtualbox_version: "6.1.16"
+
+# VirtualBox Extension Pack download details.
+virtualbox_extpack_download: "{{ _virtualbox_extpack_download[virtualbox_version] }}"

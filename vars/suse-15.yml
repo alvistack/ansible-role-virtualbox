@@ -20,9 +20,4 @@ _zypper_repository:
     state: "present"
 
 _zypper:
-  "6.1":
-    - { state: "latest", name: "VirtualBox-6.1" }
-  "6.0":
-    - { state: "latest", name: "VirtualBox-6.0" }
-  "5.2":
-    - { state: "latest", name: "VirtualBox-5.2" }
+  - { state: "present", name: "VirtualBox-6.1>{{ virtualbox_version }}" }

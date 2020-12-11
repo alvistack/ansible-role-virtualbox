@@ -22,3 +22,8 @@
       command: vboxmanage --version
       register: result
       changed_when: result is not succeeded
+
+    - name: vboxmanage list extpacks
+      command: vboxmanage list extpacks
+      register: result
+      changed_when: result is not succeeded

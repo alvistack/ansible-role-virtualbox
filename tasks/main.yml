@@ -76,13 +76,3 @@
   args:
     executable: "/bin/bash"
   when: get_url_result is changed
-
-- name: https://www.virtualbox.org/ticket/20055
-  shell: |
-    set -euo pipefail
-    cd /usr/share/virtualbox/
-    curl -skL https://www.virtualbox.org/raw-attachment/ticket/20055/linux-5.10-r0drv-memobj-fix-r0.patch | sed 's/VBox\/Runtime/vboxhost\/vboxdrv/g' | patch -p0
-  args:
-    executable: "/bin/bash"
-  changed_when: false
-  ignore_errors: true

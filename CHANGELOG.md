@@ -1,9 +1,14 @@
 # Ansible Role for VirtualBox
 
-## 4.6.0 - TBC
+## 4.7.0 - TBC
 
 ### Major Changes
 
+## 4.6.0 - 2020-12-28
+
+### Major Changes
+
+  - Simplify Molecule scenario for vagrant-libvirt
   - Support VirtualBox Extension Pack
   - Remove EOL version support
   - Migrate from Travis CI to GitLab CI

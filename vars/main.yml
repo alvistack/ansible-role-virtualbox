@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _virtualbox_extpack_download:
-  "6.1.16":
-    url: "https://download.virtualbox.org/virtualbox/6.1.16/Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack"
-    checksum: "sha1:4b4dc8208d90d17c4b119702a8906f82a60552c1"
+  "6.1.18":
+    url: "https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack"
+    checksum: "sha1:f7ff96d676049865f71397c44a2418090de680e2"

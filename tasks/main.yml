@@ -54,6 +54,7 @@
     state: "{{ item.state | default('directory') }}"
   loop:
     - { dest: "{{ virtualbox_extpack_download.dest | dirname }}" }
+  register: file_result
 
 - name: download archive
   vars:
@@ -66,13 +67,15 @@
     timeout: 300
   loop:
     - "{{ virtualbox_extpack_download }}"
+  when: file_result is changed
   register: get_url_result
   until: get_url_result is succeeded
 
 - name: vboxmanage extpack install
   shell: |
     set -euo pipefail
+    exec &> >(tee -a {{ virtualbox_extpack_download.dest }}.log)
     echo "y" | vboxmanage extpack install {{ virtualbox_extpack_download.dest }} --replace
   args:
     executable: "/bin/bash"
-  when: get_url_result is changed
+    creates: "{{ virtualbox_extpack_download.dest }}.log"

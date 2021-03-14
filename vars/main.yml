@@ -18,4 +18,4 @@ _virtualbox_extpack_download:
   "6.1.18":
     url: "http://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack"
     dest: "/var/cache/ansible/d609e35accff5c0819ca9be47de302abf094dc1b6d4c54da8fdda639671f267e/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack"
-    checksum: "sha256:d609e35accff5c0819ca9be47de302abf094dc1b6d4c54da8fdda639671f267e"
+    sha256sum: "d609e35accff5c0819ca9be47de302abf094dc1b6d4c54da8fdda639671f267e"

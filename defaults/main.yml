@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # VirtualBox version.
-virtualbox_version: "6.1.18"
+virtualbox_version: "6.1.20"
 
 # VirtualBox Extension Pack download details.
 virtualbox_extpack_download: "{{ _virtualbox_extpack_download[virtualbox_version] }}"

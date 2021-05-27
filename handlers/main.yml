@@ -13,3 +13,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+- name: virtualbox | VBoxManage extpack install
+  shell: |
+    set -euo pipefail
+    VERSION=$(VBoxManage --version | sed 's/^\([0-9]*\.[0-9]*\.[0-9]*\).*/\1/g')
+    TMP_DIR="$(mktemp -d)" \
+      && cd $TMP_DIR \
+      && curl -skL -m 300 -O http://download.virtualbox.org/virtualbox/$VERSION/Oracle_VM_VirtualBox_Extension_Pack-$VERSION.vbox-extpack \
+      && echo "y" | VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-$VERSION.vbox-extpack --replace \
+      && rm -rf $TMP_DIR
+  args:
+    executable: "/bin/bash"
+  register: result
+  until: result is succeeded

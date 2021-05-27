@@ -15,9 +15,9 @@
 # limitations under the License.
 
 _zypper_repository:
-  - name: "virtualbox"
-    repo: "http://download.virtualbox.org/virtualbox/rpm/opensuse/15.0/x86_64"
+  - name: "Virtualization"
+    repo: "http://download.opensuse.org/repositories/Virtualization/openSUSE_Tumbleweed"
     state: "present"
 
 _zypper:
-  - { state: "present", name: "VirtualBox-6.1>{{ virtualbox_version }}" }
+  - { state: "latest", name: "virtualbox" }

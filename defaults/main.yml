@@ -13,9 +13,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-# VirtualBox version.
-virtualbox_version: "6.1.22"
-
-# VirtualBox Extension Pack download details.
-virtualbox_extpack_download: "{{ _virtualbox_extpack_download[virtualbox_version] }}"

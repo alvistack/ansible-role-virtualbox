@@ -18,12 +18,12 @@
   remote_user: root
   become: true
   tasks:
-    - name: vboxmanage --version
-      command: vboxmanage --version
+    - name: VBoxManage --version
+      command: VBoxManage --version
       register: result
       changed_when: result is not succeeded
 
-    - name: vboxmanage list extpacks
-      command: vboxmanage list extpacks
+    - name: VBoxManage list extpacks
+      command: VBoxManage list extpacks
       register: result
       changed_when: result is not succeeded

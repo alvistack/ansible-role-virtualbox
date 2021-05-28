@@ -31,4 +31,5 @@ _yum_repository:
     state: "present"
 
 _yum:
-  - { state: "present", name: "VirtualBox-6.1-{{ virtualbox_version }}*" }
+  - { state: "latest", name: "elfutils-libelf-devel" }
+  - { state: "latest", name: "VirtualBox-6.1" }

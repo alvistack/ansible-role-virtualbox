@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Simplify VirtualBox Extension Pack installation
+  - Upgrade minimal Ansible support to 4.0.0
   - Support Fedora 34
   - Support Ubuntu 21.04
   - Simplify download archive logic

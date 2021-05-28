@@ -24,4 +24,4 @@ _apt_repository:
     state: "present"
 
 _apt:
-  - { state: "present", name: "virtualbox-6.1={{ virtualbox_version }}*" }
+  - { state: "latest", name: "virtualbox-6.1" }

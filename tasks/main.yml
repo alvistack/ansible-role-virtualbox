@@ -50,3 +50,6 @@
       paths:
         - "."
       skip: true
+
+- name: flush handlers
+  meta: flush_handlers

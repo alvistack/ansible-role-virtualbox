@@ -16,7 +16,7 @@
 
 - name: virtualbox | VBoxManage extpack install
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
     VERSION=$(curl -skL -m 300 http://download.virtualbox.org/virtualbox/LATEST.TXT)
     TMP_DIR="$(mktemp -d)"
     cd $TMP_DIR

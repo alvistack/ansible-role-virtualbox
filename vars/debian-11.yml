@@ -20,7 +20,7 @@ _apt_key:
     state: "present"
 
 _apt_repository:
-  - repo: "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib"
+  - repo: "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian hirsute contrib"
     state: "present"
 
 _apt:

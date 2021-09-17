@@ -26,6 +26,7 @@ _yum_repository:
     baseurl: "http://download.virtualbox.org/virtualbox/rpm/el/8/x86_64"
     enabled: true
     priority: "2"
+    module_hotfixes: true
     gpgcheck: true
     gpgkey: "http://www.virtualbox.org/download/oracle_vbox.asc"
     state: "present"

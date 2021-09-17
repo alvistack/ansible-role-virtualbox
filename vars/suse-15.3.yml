@@ -14,9 +14,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_zypper_repository:
-  - name: "Virtualization"
-    repo: "http://download.opensuse.org/repositories/Virtualization/openSUSE_Leap_15.3"
+_rpm_key:
+  - key: "http://download.opensuse.org/repositories/Virtualization/openSUSE_Leap_15.3/repodata/repomd.xml.key"
+    fingerprint: "55A0B34D49501BB7CA474F5AA193FBB572174FC2"
+    state: "present"
+
+_yum_repository:
+  - file: "Virtualization"
+    name: "Virtualization"
+    description: "Virtualization (openSUSE_Leap_15.3)"
+    baseurl: "http://download.opensuse.org/repositories/Virtualization/openSUSE_Leap_15.3"
+    enabled: true
+    priority: "2"
+    module_hotfixes: true
+    gpgcheck: true
+    gpgkey: "http://download.opensuse.org/repositories/Virtualization/openSUSE_Leap_15.3/repodata/repomd.xml.key"
     state: "present"
 
 _zypper:

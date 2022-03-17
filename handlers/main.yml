@@ -15,7 +15,7 @@
 # limitations under the License.
 
 - name: virtualbox | VBoxManage extpack install
-  shell: |
+  ansible.builtin.shell: |
     set -euxo pipefail
     VERSION=$(curl -skL -m 300 http://download.virtualbox.org/virtualbox/LATEST.TXT)
     TMP_DIR="$(mktemp -d)"
@@ -29,7 +29,7 @@
   until: result is succeeded
 
 - name: virtualbox | systemctl restart vboxdrv.service
-  service:
+  ansible.builtin.service:
     name: "vboxdrv.service"
     state: "restarted"
     enabled: true

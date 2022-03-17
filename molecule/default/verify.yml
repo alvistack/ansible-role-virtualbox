@@ -19,11 +19,11 @@
   become: true
   tasks:
     - name: VBoxManage --version
-      command: VBoxManage --version
+      ansible.builtin.command: VBoxManage --version
       register: result
       changed_when: result is not succeeded
 
     - name: VBoxManage list extpacks
-      command: VBoxManage list extpacks
+      ansible.builtin.command: VBoxManage list extpacks
       register: result
       changed_when: result is not succeeded

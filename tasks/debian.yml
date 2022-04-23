@@ -36,9 +36,9 @@
 
 - name: apt-get install
   ansible.builtin.apt:
+    state: "{{ item.state }}"
     name: "{{ item.name | default(None) or omit }}"
     deb: "{{ item.deb | default(None) or omit }}"
-    state: "{{ item.state }}"
   loop: "{{ _apt }}"
   register: result
   until: result is succeeded

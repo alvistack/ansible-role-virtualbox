@@ -26,4 +26,6 @@ _apt_repository:
     state: "present"
 
 _apt:
+  - { state: "present", deb: "http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1l-1ubuntu1.2_amd64.deb" }
+  - { state: "present", deb: "http://archive.ubuntu.com/ubuntu/pool/main/libv/libvpx/libvpx6_1.9.0-1ubuntu1_amd64.deb" }
   - { state: "latest", name: "virtualbox-6.1" }

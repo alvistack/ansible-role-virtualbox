@@ -22,10 +22,8 @@ _apt_key:
 
 _apt_repository:
   - filename: "virtualbox"
-    repo: "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib"
+    repo: "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian jammy contrib"
     state: "present"
 
 _apt:
-  - { state: "present", deb: "http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1l-1ubuntu1.3_amd64.deb" }
-  - { state: "present", deb: "http://archive.ubuntu.com/ubuntu/pool/main/libv/libvpx/libvpx6_1.9.0-1ubuntu1_amd64.deb" }
   - { state: "latest", name: "virtualbox-6.1" }

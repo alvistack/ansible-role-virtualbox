@@ -53,6 +53,20 @@
         - "."
       skip: true
 
+- name: VBoxManage list extpacks
+  ansible.builtin.shell:
+    cmd: |
+      set -euxo pipefail
+      VERSION=$(VBoxManage --version | sed 's/^\([0-9\.]*\)r[0-9]*$/\1/g')
+      VBoxManage list extpacks | grep -e "Version:\s*$VERSION"
+  args:
+    executable: "/bin/bash"
+  register: result
+  changed_when: result is not succeeded
+  failed_when: false
+  notify:
+    - virtualbox | VBoxManage extpack install
+
 - name: flush handlers
   ansible.builtin.meta: flush_handlers
 

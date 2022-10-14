@@ -51,5 +51,4 @@
   register: result
   until: result is succeeded
   notify:
-    - virtualbox | VBoxManage extpack install
     - virtualbox | systemctl restart vboxdrv.service

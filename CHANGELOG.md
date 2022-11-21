@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+-   Fix broken build with packer by rollback to VirtualBox 6.1
+
 ## 6.6.0 - 2022-11-10
 
 ### Major Changes

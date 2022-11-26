@@ -1,9 +1,14 @@
 # Ansible Role for VirtualBox
 
-## 7.0.0 - TBC
+## 7.1.0 - TBC
 
 ### Major Changes
 
+## 7.0.0 - 2022-11-26
+
+### Major Changes
+
+-   Support Ansible community package 7.0.0
 -   Fix broken build with packer by rollback to VirtualBox 6.1
 
 ## 6.6.0 - 2022-11-10

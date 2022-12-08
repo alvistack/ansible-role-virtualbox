@@ -33,4 +33,4 @@ _yum_repository:
 
 _yum:
   - { state: "latest", name: "elfutils-libelf-devel" }
-  - { state: "latest", name: "VirtualBox-6.1" }
+  - { state: "latest", name: "VirtualBox-7.0" }

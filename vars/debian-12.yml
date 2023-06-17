@@ -22,7 +22,7 @@ _apt_key:
 
 _apt_repository:
   - filename: "virtualbox"
-    repo: "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian buster contrib"
+    repo: "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib"
     state: "present"
 
 _apt:

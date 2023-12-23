@@ -22,9 +22,7 @@
     - name: include role
       ansible.builtin.include_role:
         name: alvistack.vagrant
-      tags: alvistack.vagrant
 
     - name: include role
       ansible.builtin.include_role:
         name: alvistack.virtualbox
-      tags: alvistack.virtualbox

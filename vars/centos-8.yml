@@ -32,5 +32,6 @@ _yum_repository:
     state: "present"
 
 _yum:
+  - { state: "latest", name: "dkms" }
   - { state: "latest", name: "elfutils-libelf-devel" }
   - { state: "latest", name: "VirtualBox-7.0" }

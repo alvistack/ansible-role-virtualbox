@@ -26,4 +26,5 @@ _apt_repository:
     state: "present"
 
 _apt:
+  - { state: "latest", name: "dkms" }
   - { state: "latest", name: "virtualbox-7.0" }

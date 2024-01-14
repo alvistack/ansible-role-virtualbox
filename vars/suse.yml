@@ -32,4 +32,5 @@ _yum_repository:
     state: "present"
 
 _zypper:
+  - { state: "latest", name: "dkms" }
   - { state: "latest", name: "virtualbox" }

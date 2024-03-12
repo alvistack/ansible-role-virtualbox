@@ -15,16 +15,16 @@
 # limitations under the License.
 
 _apt_key:
-  - keyring: "/etc/apt/trusted.gpg.d/virtualbox.gpg"
-    url: "http://www.virtualbox.org/download/oracle_vbox_2016.asc"
-    id: "B9F8D658297AF3EFC18D5CDFA2F683C52980AECF"
-    state: "present"
+  - keyring: /etc/apt/trusted.gpg.d/virtualbox.gpg
+    url: http://www.virtualbox.org/download/oracle_vbox_2016.asc
+    id: B9F8D658297AF3EFC18D5CDFA2F683C52980AECF
+    state: present
 
 _apt_repository:
-  - filename: "virtualbox"
-    repo: "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian jammy contrib"
-    state: "present"
+  - filename: virtualbox
+    repo: deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian jammy contrib
+    state: present
 
 _apt:
-  - { state: "latest", name: "dkms" }
-  - { state: "latest", name: "virtualbox-7.0" }
+  - { state: latest, name: dkms }
+  - { state: latest, name: virtualbox-7.0 }

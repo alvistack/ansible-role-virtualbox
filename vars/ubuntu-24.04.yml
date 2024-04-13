@@ -26,5 +26,6 @@ _apt_repository:
     state: present
 
 _apt:
+  - { state: present, deb: http://archive.ubuntu.com/ubuntu/pool/main/libv/libvpx/libvpx7_1.12.0-1ubuntu2_amd64.deb }
   - { state: latest, name: dkms }
   - { state: latest, name: virtualbox-7.0 }

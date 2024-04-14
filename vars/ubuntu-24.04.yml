@@ -21,3 +21,5 @@ _apt_repository: []
 _apt:
   - { state: latest, name: dkms }
   - { state: latest, name: virtualbox }
+  - { state: latest, name: virtualbox-dkms }
+  - { state: latest, name: virtualbox-guest-additions-iso }

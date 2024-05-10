@@ -17,7 +17,7 @@
   ansible.builtin.shell:
     cmd: |
       set -euxo pipefail
-      VERSION=$(VBoxManage --version | sed 's/^\([0-9\.]*\)r[0-9]*$/\1/g')
+      VERSION=$(VBoxManage --version | grep -v WARNING | sed 's/^\([0-9\.]*\)r[0-9]*$/\1/g')
       EXTPACK="Oracle_VM_VirtualBox_Extension_Pack-$VERSION.vbox-extpack"
       TMP_DIR="$(mktemp -d)"
       cd $TMP_DIR

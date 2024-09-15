@@ -27,4 +27,4 @@ _apt_repository:
 
 _apt:
   - { state: latest, name: dkms }
-  - { state: latest, name: virtualbox-7.0 }
+  - { state: latest, name: virtualbox-7.1 }

@@ -16,14 +16,14 @@
 
 _rpm_key:
   - key: http://www.virtualbox.org/download/oracle_vbox.asc
-    fingerprint: 7.1FAB3A13B907435925D9C954422A4B98AB5139
+    fingerprint: 7B0FAB3A13B907435925D9C954422A4B98AB5139
     state: present
 
 _yum_repository:
   - file: virtualbox
     name: virtualbox
-    description: Fedora 39 - x86_64 - VirtualBox
-    baseurl: http://download.virtualbox.org/virtualbox/rpm/fedora/39/x86_64
+    description: Fedora 41 - x86_64 - VirtualBox
+    baseurl: http://download.virtualbox.org/virtualbox/rpm/fedora/41/x86_64
     enabled: true
     priority: "2"
     module_hotfixes: true

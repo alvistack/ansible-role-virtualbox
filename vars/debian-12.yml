@@ -14,15 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt_key:
-  - keyring: /etc/apt/trusted.gpg.d/virtualbox.gpg
-    url: http://www.virtualbox.org/download/oracle_vbox_2016.asc
-    id: B9F8D658297AF3EFC18D5CDFA2F683C52980AECF
-    state: present
-
-_apt_repository:
-  - filename: virtualbox
-    repo: deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bookworm contrib
+_deb822_repository:
+  - name: virtualbox
+    types: deb
+    uris: http://download.virtualbox.org/virtualbox/debian
+    suites: bookworm
+    components: contrib
+    signed_by: http://www.virtualbox.org/download/oracle_vbox_2016.asc
+    architectures: amd64
+    enabled: true
     state: present
 
 _apt:

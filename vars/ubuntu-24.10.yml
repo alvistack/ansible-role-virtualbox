@@ -14,13 +14,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_apt_key:
+  - url: http://www.virtualbox.org/download/oracle_vbox_2016.asc
+    dest: /etc/apt/keyrings/virtualbox.asc
+    checksum: "sha256:49e6801d45f6536232c11be6cdb43fa8e0198538d29d1075a7e10165e1fbafe2"
+
 _deb822_repository:
   - name: virtualbox
     types: deb
     uris: http://download.virtualbox.org/virtualbox/debian
     suites: oracular
     components: contrib
-    signed_by: http://www.virtualbox.org/download/oracle_vbox_2016.asc
+    signed_by: /etc/apt/keyrings/virtualbox.asc
     architectures: amd64
     enabled: true
     state: present

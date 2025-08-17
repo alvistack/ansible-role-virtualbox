@@ -23,7 +23,7 @@ _deb822_repository:
   - name: virtualbox
     types: deb
     uris: https://download.virtualbox.org/virtualbox/debian
-    suites: bookworm
+    suites: trixie
     components: contrib
     signed_by: /etc/apt/keyrings/virtualbox.asc
     architectures: amd64

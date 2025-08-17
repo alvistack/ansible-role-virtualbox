@@ -32,4 +32,4 @@ _deb822_repository:
 
 _apt:
   - { state: latest, name: dkms }
-  - { state: latest, name: virtualbox-7.1 }
+  - { state: latest, name: virtualbox-7.2 }

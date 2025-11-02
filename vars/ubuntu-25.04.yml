@@ -23,7 +23,7 @@ _deb822_repository:
   - name: virtualbox
     types: deb
     uris: http://download.virtualbox.org/virtualbox/debian
-    suites: oracular
+    suites: plucky
     components: contrib
     signed_by: /etc/apt/keyrings/virtualbox.asc
     architectures: amd64

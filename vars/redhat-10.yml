@@ -15,20 +15,20 @@
 # limitations under the License.
 
 _rpm_key:
-  - key: https://www.virtualbox.org/download/oracle_vbox.asc
+  - key: http://www.virtualbox.org/download/oracle_vbox.asc
     fingerprint: 7B0FAB3A13B907435925D9C954422A4B98AB5139
     state: present
 
 _yum_repository:
   - file: virtualbox
     name: virtualbox
-    description: Fedora 43 - x86_64 - VirtualBox
-    baseurl: https://download.virtualbox.org/virtualbox/rpm/fedora/43/x86_64
+    description: Oracle Linux / RHEL / CentOS-9 / x86_64 - VirtualBox
+    baseurl: http://download.virtualbox.org/virtualbox/rpm/el/9/x86_64
     enabled: true
     priority: "2"
     module_hotfixes: true
     gpgcheck: true
-    gpgkey: https://www.virtualbox.org/download/oracle_vbox.asc
+    gpgkey: http://www.virtualbox.org/download/oracle_vbox.asc
     state: present
 
 _yum:

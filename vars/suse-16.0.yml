@@ -15,23 +15,22 @@
 # limitations under the License.
 
 _rpm_key:
-  - key: http://www.virtualbox.org/download/oracle_vbox.asc
-    fingerprint: 7B0FAB3A13B907435925D9C954422A4B98AB5139
+  - key: http://download.opensuse.org/repositories/Virtualization/16.0/repodata/repomd.xml.key
+    fingerprint: 55A0B34D49501BB7CA474F5AA193FBB572174FC2
     state: present
 
 _yum_repository:
-  - file: virtualbox
-    name: virtualbox
-    description: Fedora 41 - x86_64 - VirtualBox
-    baseurl: http://download.virtualbox.org/virtualbox/rpm/fedora/41/x86_64
+  - file: Virtualization
+    name: Virtualization
+    description: Virtualization (openSUSE_Leap_16.0)
+    baseurl: http://download.opensuse.org/repositories/Virtualization/16.0
     enabled: true
     priority: "2"
     module_hotfixes: true
     gpgcheck: true
-    gpgkey: http://www.virtualbox.org/download/oracle_vbox.asc
+    gpgkey: http://download.opensuse.org/repositories/Virtualization/16.0/repodata/repomd.xml.key
     state: present
 
-_yum:
+_zypper:
   - { state: latest, name: dkms }
-  - { state: latest, name: elfutils-libelf-devel }
-  - { state: latest, name: VirtualBox-7.2 }
+  - { state: latest, name: virtualbox }

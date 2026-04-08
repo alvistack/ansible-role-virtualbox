@@ -31,5 +31,6 @@ _deb822_repository:
     state: present
 
 _apt:
+  - { state: present, deb: http://archive.ubuntu.com/ubuntu/pool/main/libv/libvpx/libvpx9_1.15.0-2.1build1_amd64.deb }
   - { state: latest, name: dkms }
   - { state: latest, name: virtualbox-7.2 }

@@ -31,7 +31,7 @@ _yum_repository:
     gpgkey: https://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc
     state: present
 
-_yum:
+_dnf:
   - { state: latest, name: dkms }
   - { state: latest, name: elfutils-libelf-devel }
   - { state: latest, name: VirtualBox-7.2 }

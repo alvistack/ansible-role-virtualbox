@@ -23,7 +23,7 @@ _deb822_repository:
   - name: virtualbox
     types: deb
     uris: http://download.virtualbox.org/virtualbox/debian
-    suites: stonking
+    suites: resolute
     components: contrib
     signed_by: /etc/apt/keyrings/virtualbox.asc
     architectures: amd64
@@ -31,5 +31,6 @@ _deb822_repository:
     state: present
 
 _apt:
+  - { state: present, deb: http://archive.ubuntu.com/ubuntu/pool/universe/g/gsoap/libgsoap-2.8.139_2.8.139-1_amd64.deb }
   - { state: latest, name: dkms }
   - { state: latest, name: virtualbox-7.2 }
